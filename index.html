@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>El Mundo de las Prendas | Vanessa Maldonado</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Tenor+Sans&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --brand-gold: #c5a059;
+            --brand-dark: #1a1a1a;
+        }
+        body { font-family: 'Plus Jakarta Sans', sans-serif; }
+        h1, h2, h3, .font-serif { font-family: 'Tenor Sans', serif; }
+        
+        .hero-video-container {
+            position: relative;
+            height: 85vh;
+            overflow: hidden;
+            background: var(--brand-dark);
+        }
+        
+        .hero-overlay {
+            background: linear-gradient(to right, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.2) 100%);
+        }
+
+        .animate-fade-in-up {
+            animation: fadeInUp 1s ease-out forwards;
+        }
+
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .product-card {
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        .product-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .brand-logo {
+            letter-spacing: 0.25em;
+            text-transform: uppercase;
+            font-weight: 400;
+        }
+
+        .testimonial-card {
+            background: white;
+            border-radius: 1rem;
+            padding: 2rem;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+        }
+    </style>
+</head>
+<body class="bg-[#faf9f6] text-gray-900">
+
+    <!-- Anuncio Superior -->
+    <div class="bg-black text-white text-[10px] py-2.5 text-center font-bold tracking-[0.2em] uppercase px-4">
+        EL MUNDO DE LAS PRENDAS • EXCLUSIVIDAD & CALIDAD • ENVÍOS TODO ECUADOR
+    </div>
+
+    <!-- Navegación Premium -->
+    <nav class="sticky top-0 w-full z-50 bg-white/80 backdrop-blur-md border-b border-gray-100">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="flex justify-between h-20 items-center">
+                <div class="flex-shrink-0">
+                    <div class="flex flex-col leading-none">
+                        <span class="text-lg md:text-xl font-serif brand-logo text-gray-900">EL MUNDO DE LAS</span>
+                        <span class="text-lg md:text-xl font-serif brand-logo text-amber-600 tracking-[0.4em]">PRENDAS</span>
+                    </div>
+                </div>
+                <div class="hidden md:flex space-x-10">
+                    <a href="#inicio" class="text-[11px] uppercase tracking-widest font-bold hover:text-amber-600 transition text-gray-500">Inicio</a>
+                    <a href="#catalogo" class="text-[11px] uppercase tracking-widest font-bold hover:text-amber-600 transition text-gray-500">Colección</a>
+                    <a href="#testimonios" class="text-[11px] uppercase tracking-widest font-bold hover:text-amber-600 transition text-gray-500">Clientes</a>
+                    <a href="#propietaria" class="text-[11px] uppercase tracking-widest font-bold hover:text-amber-600 transition text-gray-500">Propietaria</a>
+                </div>
+                <div class="flex items-center gap-4">
+                    <a href="#datos-envio" class="bg-black text-white px-6 py-2.5 rounded-full text-[10px] font-black uppercase tracking-widest hover:bg-amber-800 transition shadow-lg">Mi Pedido</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section Dinámico -->
+    <section id="inicio" class="hero-video-container flex items-center">
+        <div class="absolute inset-0">
+            <img src="https://images.unsplash.com/photo-1490481651871-ab68de25d43d?auto=format&fit=crop&w=1920&q=80" class="w-full h-full object-cover" alt="[Moda de Lujo]">
+            <div class="absolute inset-0 hero-overlay"></div>
+        </div>
+        
+        <div class="relative max-w-7xl mx-auto px-6 w-full">
+            <div class="max-w-2xl animate-fade-in-up">
+                <span class="text-amber-500 font-bold tracking-[0.3em] uppercase text-xs mb-4 block">Colección Seleccionada por Vanessa Maldonado</span>
+                <h1 class="text-6xl md:text-8xl text-white mb-8 leading-[0.9] font-serif">EL MUNDO DE LAS <br><span class="italic text-amber-200">PRENDAS</span></h1>
+                <p class="text-gray-300 text-lg mb-10 font-light max-w-md border-l-2 border-amber-600 pl-6">
+                    Estilo, distinción y calidad garantizada. Descubre piezas exclusivas diseñadas para elevar tu presencia.
+                </p>
+                <div class="flex gap-4">
+                    <a href="#catalogo" class="bg-white text-black px-10 py-4 rounded-sm font-bold uppercase text-[10px] tracking-widest hover:bg-amber-600 hover:text-white transition-all shadow-2xl">Ver Catálogo</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Catálogo de Productos con Tallas -->
+    <section id="catalogo" class="py-24">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center mb-20">
+                <h2 class="text-4xl font-serif mb-2 uppercase tracking-widest text-gray-800">Nuestra Colección</h2>
+                <p class="text-amber-700 font-bold text-[10px] tracking-[0.3em] uppercase">Curada por Vanessa Maldonado</p>
+                <div class="w-12 h-[1px] bg-amber-600 mx-auto mt-6"></div>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12">
+                
+                <!-- Producto 1 -->
+                <div class="product-card group">
+                    <div class="relative overflow-hidden aspect-[3/4] mb-6 shadow-xl rounded-sm">
+                        <img src="https://images.unsplash.com/photo-1552374196-1ab2a1c593e8?auto=format&fit=crop&w=600&q=80" alt="[Camisa de Lino]" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                    </div>
+                    <div class="text-center px-2">
+                        <h4 class="text-sm font-bold text-gray-900 uppercase tracking-widest mb-1">Camisa Lino Slim Fit</h4>
+                        <p class="text-amber-700 font-serif text-xl mb-4">$18.50</p>
+                        
+                        <!-- Selector de Tallas -->
+                        <div class="flex flex-col gap-3 mb-6">
+                            <label class="text-[9px] font-black uppercase text-gray-400 tracking-widest">Seleccionar Talla</label>
+                            <div class="flex justify-center gap-2">
+                                <label class="cursor-pointer">
+                                    <input type="radio" name="talla-1" value="S" class="hidden peer" checked>
+                                    <span class="w-10 h-10 flex items-center justify-center border border-gray-200 text-xs font-bold peer-checked:bg-black peer-checked:text-white transition">S</span>
+                                </label>
+                                <label class="cursor-pointer">
+                                    <input type="radio" name="talla-1" value="M" class="hidden peer">
+                                    <span class="w-10 h-10 flex items-center justify-center border border-gray-200 text-xs font-bold peer-checked:bg-black peer-checked:text-white transition">M</span>
+                                </label>
+                                <label class="cursor-pointer">
+                                    <input type="radio" name="talla-1" value="L" class="hidden peer">
+                                    <span class="w-10 h-10 flex items-center justify-center border border-gray-200 text-xs font-bold peer-checked:bg-black peer-checked:text-white transition">L</span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="flex items-center justify-center gap-3 mb-6">
+                            <span class="text-[10px] font-bold text-gray-400 uppercase">Cantidad</span>
+                            <input type="number" id="cant-1" min="1" value="1" class="w-12 py-1 bg-transparent border-b border-gray-300 text-center font-bold outline-none">
+                        </div>
+
+                        <button onclick="enviarPedido('Camisa Lino Slim Fit', 18.50, 'cant-1', 'talla-1')" class="w-full bg-gray-900 text-white py-4 text-[10px] font-black uppercase tracking-widest hover:bg-amber-600 transition-all duration-300">
+                            Añadir al Pedido
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Producto 2 -->
+                <div class="product-card group">
+                    <div class="relative overflow-hidden aspect-[3/4] mb-6 shadow-xl rounded-sm">
+                        <img src="https://images.unsplash.com/photo-1515372039744-b8f02a3ae446?auto=format&fit=crop&w=600&q=80" alt="[Vestido Floral]" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                    </div>
+                    <div class="text-center px-2">
+                        <h4 class="text-sm font-bold text-gray-900 uppercase tracking-widest mb-1">Vestido Floral Santy</h4>
+                        <p class="text-amber-700 font-serif text-xl mb-4">$24.99</p>
+                        <div class="flex flex-col gap-3 mb-6">
+                            <label class="text-[9px] font-black uppercase text-gray-400 tracking-widest">Seleccionar Talla</label>
+                            <div class="flex justify-center gap-2">
+                                <label class="cursor-pointer"><input type="radio" name="talla-2" value="S" class="hidden peer" checked><span class="w-10 h-10 flex items-center justify-center border border-gray-200 text-xs font-bold peer-checked:bg-black peer-checked:text-white transition">S</span></label>
+                                <label class="cursor-pointer"><input type="radio" name="talla-2" value="M" class="hidden peer"><span class="w-10 h-10 flex items-center justify-center border border-gray-200 text-xs font-bold peer-checked:bg-black peer-checked:text-white transition">M</span></label>
+                                <label class="cursor-pointer"><input type="radio" name="talla-2" value="L" class="hidden peer"><span class="w-10 h-10 flex items-center justify-center border border-gray-200 text-xs font-bold peer-checked:bg-black peer-checked:text-white transition">L</span></label>
+                            </div>
+                        </div>
+                        <div class="flex items-center justify-center gap-3 mb-6">
+                            <span class="text-[10px] font-bold text-gray-400 uppercase">Cantidad</span>
+                            <input type="number" id="cant-2" min="1" value="1" class="w-12 py-1 bg-transparent border-b border-gray-300 text-center font-bold outline-none">
+                        </div>
+                        <button onclick="enviarPedido('Vestido Floral Santy', 24.99, 'cant-2', 'talla-2')" class="w-full bg-gray-900 text-white py-4 text-[10px] font-black uppercase tracking-widest hover:bg-amber-600 transition">
+                            Añadir al Pedido
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Producto 3 -->
+                <div class="product-card group">
+                    <div class="relative overflow-hidden aspect-[3/4] mb-6 shadow-xl rounded-sm">
+                        <img src="https://images.unsplash.com/photo-1506629082955-511b1aa562c8?auto=format&fit=crop&w=600&q=80" alt="[Jean Clásico]" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                    </div>
+                    <div class="text-center px-2">
+                        <h4 class="text-sm font-bold text-gray-900 uppercase tracking-widest mb-1">Jean Clásico Tsáchila</h4>
+                        <p class="text-amber-700 font-serif text-xl mb-4">$28.00</p>
+                        <div class="flex flex-col gap-3 mb-6">
+                            <label class="text-[9px] font-black uppercase text-gray-400 tracking-widest">Talla (Cintura)</label>
+                            <div class="flex justify-center gap-2">
+                                <label class="cursor-pointer"><input type="radio" name="talla-3" value="30" class="hidden peer" checked><span class="w-10 h-10 flex items-center justify-center border border-gray-200 text-xs font-bold peer-checked:bg-black peer-checked:text-white transition">30</span></label>
+                                <label class="cursor-pointer"><input type="radio" name="talla-3" value="32" class="hidden peer"><span class="w-10 h-10 flex items-center justify-center border border-gray-200 text-xs font-bold peer-checked:bg-black peer-checked:text-white transition">32</span></label>
+                                <label class="cursor-pointer"><input type="radio" name="talla-3" value="34" class="hidden peer"><span class="w-10 h-10 flex items-center justify-center border border-gray-200 text-xs font-bold peer-checked:bg-black peer-checked:text-white transition">34</span></label>
+                            </div>
+                        </div>
+                        <div class="flex items-center justify-center gap-3 mb-6">
+                            <span class="text-[10px] font-bold text-gray-400 uppercase">Cantidad</span>
+                            <input type="number" id="cant-3" min="1" value="1" class="w-12 py-1 bg-transparent border-b border-gray-300 text-center font-bold outline-none">
+                        </div>
+                        <button onclick="enviarPedido('Jean Clásico Tsáchila', 28.00, 'cant-3', 'talla-3')" class="w-full bg-gray-900 text-white py-4 text-[10px] font-black uppercase tracking-widest hover:bg-amber-600 transition">
+                            Añadir al Pedido
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Producto 4 -->
+                <div class="product-card group">
+                    <div class="relative overflow-hidden aspect-[3/4] mb-6 shadow-xl rounded-sm">
+                        <img src="https://images.unsplash.com/photo-1556821840-3a63f95609a7?auto=format&fit=crop&w=600&q=80" alt="[Hoodie Oversize]" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                    </div>
+                    <div class="text-center px-2">
+                        <h4 class="text-sm font-bold text-gray-900 uppercase tracking-widest mb-1">Hoodie Oversize</h4>
+                        <p class="text-amber-700 font-serif text-xl mb-4">$22.00</p>
+                        <div class="flex flex-col gap-3 mb-6">
+                            <label class="text-[9px] font-black uppercase text-gray-400 tracking-widest">Seleccionar Talla</label>
+                            <div class="flex justify-center gap-2">
+                                <label class="cursor-pointer"><input type="radio" name="talla-4" value="M" class="hidden peer" checked><span class="w-10 h-10 flex items-center justify-center border border-gray-200 text-xs font-bold peer-checked:bg-black peer-checked:text-white transition">M</span></label>
+                                <label class="cursor-pointer"><input type="radio" name="talla-4" value="L" class="hidden peer"><span class="w-10 h-10 flex items-center justify-center border border-gray-200 text-xs font-bold peer-checked:bg-black peer-checked:text-white transition">L</span></label>
+                                <label class="cursor-pointer"><input type="radio" name="talla-4" value="XL" class="hidden peer"><span class="w-10 h-10 flex items-center justify-center border border-gray-200 text-xs font-bold peer-checked:bg-black peer-checked:text-white transition">XL</span></label>
+                            </div>
+                        </div>
+                        <div class="flex items-center justify-center gap-3 mb-6">
+                            <span class="text-[10px] font-bold text-gray-400 uppercase">Cantidad</span>
+                            <input type="number" id="cant-4" min="1" value="1" class="w-12 py-1 bg-transparent border-b border-gray-300 text-center font-bold outline-none">
+                        </div>
+                        <button onclick="enviarPedido('Hoodie Oversize', 22.00, 'cant-4', 'talla-4')" class="w-full bg-gray-900 text-white py-4 text-[10px] font-black uppercase tracking-widest hover:bg-amber-600 transition">
+                            Añadir al Pedido
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección de Testimonios / Reseñas Reales -->
+    <section id="testimonios" class="py-24 bg-amber-50/50">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-serif mb-4 uppercase tracking-widest">Experiencias Reales</h2>
+                <p class="text-gray-500 text-sm tracking-widest uppercase font-bold">Lo que dicen nuestros clientes en Ecuador</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Testimonio 1 -->
+                <div class="testimonial-card">
+                    <div class="flex items-center gap-4 mb-6">
+                        <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=100&h=100" class="w-12 h-12 rounded-full object-cover" alt="[Cliente María]">
+                        <div>
+                            <h5 class="text-xs font-black uppercase tracking-widest">María Fernanda R.</h5>
+                            <div class="text-amber-500 text-[10px] flex gap-1 mt-1">
+                                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-sm text-gray-600 italic leading-relaxed">"La calidad de la tela es increíble. El envío a Quito llegó en menos de 24 horas y Vanessa me asesoró personalmente con la talla. ¡Súper recomendados!"</p>
+                </div>
+
+                <!-- Testimonio 2 -->
+                <div class="testimonial-card">
+                    <div class="flex items-center gap-4 mb-6">
+                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=100&h=100" class="w-12 h-12 rounded-full object-cover" alt="[Cliente Carlos]">
+                        <div>
+                            <h5 class="text-xs font-black uppercase tracking-widest">Carlos Zambrano</h5>
+                            <div class="text-amber-500 text-[10px] flex gap-1 mt-1">
+                                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-sm text-gray-600 italic leading-relaxed">"Compré los jeans Tsáchila y el calce es perfecto. Es difícil encontrar buena calidad a este precio hoy en día. Sin duda volveré a comprar."</p>
+                </div>
+
+                <!-- Testimonio 3 -->
+                <div class="testimonial-card">
+                    <div class="flex items-center gap-4 mb-6">
+                        <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=100&h=100" class="w-12 h-12 rounded-full object-cover" alt="[Cliente Andrea]">
+                        <div>
+                            <h5 class="text-xs font-black uppercase tracking-widest">Andrea L. Paredes</h5>
+                            <div class="text-amber-500 text-[10px] flex gap-1 mt-1">
+                                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-sm text-gray-600 italic leading-relaxed">"Me encantó el vestido. El Mundo de las Prendas tiene ese toque exclusivo que buscaba. Gracias Vanessa por la excelente atención en Santo Domingo."</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Perfil de Propietaria -->
+    <section id="propietaria" class="py-24 bg-[#121212] text-white overflow-hidden relative">
+        <div class="max-w-7xl mx-auto px-6 relative z-10">
+            <div class="flex flex-col md:flex-row items-center gap-16">
+                <div class="w-full md:w-1/2 relative group">
+                    <div class="absolute -inset-4 border border-amber-500/30 rounded-2xl transform translate-x-4 translate-y-4"></div>
+                    <div class="relative bg-gray-900 rounded-2xl overflow-hidden shadow-[0_0_50px_rgba(0,0,0,0.5)]">
+                        <img src="https://storage.googleapis.com/static.invideo.io/images/1738448580556_image_08ff15.jpg" alt="[Vanessa Maldonado - Propietaria de El Mundo de las Prendas]" class="w-full aspect-square object-cover object-top filter contrast-[1.05] brightness-[1.02]">
+                        <div class="absolute bottom-0 left-0 right-0 p-8 bg-gradient-to-t from-black/80 to-transparent text-center">
+                            <p class="text-amber-500 font-bold uppercase tracking-[0.3em] text-[10px]">Vanessa Maldonado</p>
+                            <p class="text-[8px] uppercase tracking-widest text-gray-400 mt-1">Directora Creativa</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="w-full md:w-1/2">
+                    <h2 class="text-5xl font-serif mb-8 leading-tight text-white uppercase tracking-widest">Garantía <br><span class="text-amber-500">& Calidad</span></h2>
+                    <div class="h-1 w-20 bg-amber-500 mb-8"></div>
+                    <p class="text-gray-400 text-lg font-light leading-relaxed mb-8 italic">
+                        "En **EL MUNDO DE LAS PRENDAS**, seleccionamos cada hilo pensando en tu comodidad. Mi nombre es mi garantía: si no estás satisfecha, yo misma me encargo de resolverlo."
+                    </p>
+                    <div class="flex items-center gap-6">
+                        <div class="text-center border-r border-gray-800 pr-6">
+                            <p class="text-2xl font-serif text-amber-500">100%</p>
+                            <p class="text-[9px] uppercase tracking-widest text-gray-500">Confianza</p>
+                        </div>
+                        <div class="text-center">
+                            <p class="text-2xl font-serif text-amber-500">Sto.Dgo</p>
+                            <p class="text-[9px] uppercase tracking-widest text-gray-500">Sede Central</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Formulario de Entrega -->
+    <section id="datos-envio" class="py-24">
+        <div class="max-w-4xl mx-auto px-6">
+            <div class="bg-white p-12 shadow-2xl rounded-sm border-t-4 border-amber-600">
+                <div class="text-center mb-16">
+                    <span class="text-amber-700 font-bold uppercase tracking-widest text-[10px] mb-4 block">Logística El Mundo de las Prendas</span>
+                    <h2 class="text-4xl font-serif">Datos de Envío</h2>
+                </div>
+                
+                <form id="form-envio" class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div class="space-y-2">
+                        <label class="text-[10px] uppercase tracking-widest font-black text-gray-400">Nombre Completo</label>
+                        <input type="text" id="cliente-nombre" class="w-full p-4 border-b border-gray-200 focus:border-amber-600 outline-none bg-gray-50/50 transition" placeholder="Juan Pérez">
+                    </div>
+                    <div class="space-y-2">
+                        <label class="text-[10px] uppercase tracking-widest font-black text-gray-400">Cédula / RUC</label>
+                        <input type="text" id="cliente-cedula" class="w-full p-4 border-b border-gray-200 focus:border-amber-600 outline-none bg-gray-50/50 transition" placeholder="17...">
+                    </div>
+                    <div class="col-span-full space-y-2">
+                        <label class="text-[10px] uppercase tracking-widest font-black text-gray-400">Dirección para el Entrega</label>
+                        <input type="text" id="cliente-direccion" class="w-full p-4 border-b border-gray-200 focus:border-amber-600 outline-none bg-gray-50/50 transition" placeholder="Ciudad, Calle y Referencia">
+                    </div>
+                    <div class="space-y-2">
+                        <label class="text-[10px] uppercase tracking-widest font-black text-gray-400">Celular WhatsApp</label>
+                        <input type="text" id="cliente-telefono" class="w-full p-4 border-b border-gray-200 focus:border-amber-600 outline-none bg-gray-50/50 transition" placeholder="09...">
+                    </div>
+                </form>
+
+                <div class="mt-12 p-6 bg-amber-50 border border-amber-100 rounded-sm text-center">
+                    <p class="text-[11px] text-amber-900 font-bold uppercase tracking-widest">📦 Envíos Seguros</p>
+                    <p class="text-xs font-light text-amber-800 mt-2">Al presionar el botón de pedido arriba, se enviará su información completa a nuestra central de pedidos.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Premium -->
+    <footer class="bg-white border-t py-16">
+        <div class="max-w-7xl mx-auto px-6 text-center">
+            <div class="mb-8 flex flex-col items-center">
+                <span class="text-xl font-serif tracking-[0.2em] text-gray-900 uppercase">EL MUNDO DE LAS PRENDAS</span>
+                <span class="text-[9px] uppercase tracking-[0.4em] text-amber-600 font-bold mt-2">Directora: Vanessa Maldonado</span>
+            </div>
+            <p class="text-[10px] text-gray-400 tracking-widest uppercase italic mt-10">© 2024 EL MUNDO DE LAS PRENDAS • SANTO DOMINGO - ECUADOR</p>
+        </div>
+    </footer>
+
+    <!-- Botón Flotante -->
+    <a href="https://wa.me/593997447943" target="_blank" class="fixed bottom-10 right-10 bg-[#25D366] w-14 h-14 rounded-full flex items-center justify-center text-white shadow-2xl hover:scale-110 transition-all z-50">
+        <i class="fab fa-whatsapp text-2xl"></i>
+    </a>
+
+    <script>
+        function enviarPedido(producto, precio, inputId, tallaName) {
+            const cantidad = document.getElementById(inputId).value;
+            const talla = document.querySelector(`input[name="${tallaName}"]:checked`).value;
+            
+            const nombre = document.getElementById('cliente-nombre').value;
+            const cedula = document.getElementById('cliente-cedula').value;
+            const direccion = document.getElementById('cliente-direccion').value;
+            const telefono = document.getElementById('cliente-telefono').value;
+
+            if (!nombre || !direccion || !telefono) {
+                alert("Por favor, complete sus datos de envío abajo para que podamos enviarle su pedido.");
+                document.getElementById('datos-envio').scrollIntoView({ behavior: 'smooth' });
+                return;
+            }
+
+            const total = (precio * cantidad).toFixed(2);
+            const mensaje = `*NUEVO PEDIDO: EL MUNDO DE LAS PRENDAS*%0A%0A` +
+                            `🛍️ *Producto:* ${producto}%0A` +
+                            `📏 *Talla:* ${talla}%0A` +
+                            `🔢 *Cantidad:* ${cantidad}%0A` +
+                            `💵 *Total:* $${total}%0A%0A` +
+                            `👤 *DATOS DEL CLIENTE:*%0A` +
+                            `*Nombre:* ${nombre}%0A` +
+                            `*ID:* ${cedula}%0A` +
+                            `*Entrega en:* ${direccion}%0A` +
+                            `*WhatsApp:* ${telefono}%0A%0A` +
+                            `_Atentamente: Vanessa Maldonado_`;
+
+            window.open(`https://wa.me/593997447943?text=${mensaje}`, '_blank');
+        }
+    </script>
+</body>
+</html>
